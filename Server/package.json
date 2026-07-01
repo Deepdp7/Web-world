@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Backend API for Web World",
+  "description": "Backend API for waveword",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
