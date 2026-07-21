@@ -18,9 +18,17 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err.message));
 
-// Basic route
-app.get('/', (req, res) => {
-  res.send('Server is up and running!');
+const path = require('path');
+
+// Basic route for API check
+app.get('/api', (req, res) => {
+  res.send('API is up and running!');
+});
+
+// Serve frontend in production
+app.use(express.static(path.join(__dirname, '../Client/dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../Client/dist', 'index.html'));
 });
 
 // Start server
