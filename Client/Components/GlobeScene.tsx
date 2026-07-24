@@ -2,7 +2,6 @@ import { useRef, useMemo, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import {
-  Sphere,
   Float,
   Stars,
   PerspectiveCamera,
