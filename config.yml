@@ -1,0 +1,11 @@
+tunnel: d15cd21f-d5a1-465d-9742-568793c14547
+credentials-file: /home/deepdp/.cloudflared/d15cd21f-d5a1-465d-9742-568793c14547.json
+
+ingress:
+  - hostname: hosting.waveword.in
+    service: http://localhost:5001
+  - hostname: server.waveword.in
+    service: http://localhost:7681
+  - hostname: waveword.in
+    service: http://localhost:5000
+  - service: http_status:404
